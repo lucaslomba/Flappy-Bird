@@ -1,7 +1,28 @@
-https://lucaslomba.github.io/Flappy-Bird/
+# 🪽 Flappy bird game
 
-# Clone Flappy-Bird
+Clone of the famous game flappy bird, with a focus on studying
+## 🚀 Techs
 
-#Jogo desenviolvido com JS no intuito de estudos do curso da Cod3r
+HTML, CSS, JavaScript
 
-#Jogo usou JavaScript, HTML e CSS
+
+## 🛠️ Running
+
+📥 Clone the repository:
+
+```bash
+  git clone https://github.com/lucaslomba/Flappy-Bird.git
+```
+
+📂 Navigate to the project directory:
+
+```bash
+  cd flappy-Bird
+```
+
+▶️ Open the index.html file
+
+## Authors
+
+- [@lucaslomba](https://github.com/lucaslomba)
+
