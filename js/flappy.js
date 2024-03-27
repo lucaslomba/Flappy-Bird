@@ -48,7 +48,7 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
         new ParDeBarreiras(altura, abertura, largura + espaco * 3) 
     ]
 
-    const deslocamento = 3 // deslocamento das barreiras será de 3px
+    const deslocamento = 3
 
     this.animar = () => { 
         this.pares.forEach(par => { 
@@ -78,7 +78,7 @@ function Passaro(alturaJogo) {
     window.onkeydown = e => voando = true 
     window.onkeyup = e => voando = false 
 
-    this.animar = () => { // função que fará o pássaro "voar"
+    this.animar = () => {
         const novoY = this.getY() + (voando ? 8 : -5) 
         const alturaMaxima = alturaJogo - this.elemento.clientHeight 
 
@@ -91,7 +91,7 @@ function Passaro(alturaJogo) {
         }
     }
     
-    this.setY(alturaJogo / 2) // altura inicial do pássaro
+    this.setY(alturaJogo / 2)
 }
 
 
@@ -106,7 +106,7 @@ function Progresso() {
 }
 
 
-function estaoSobrepostos(elementoA, elementoB) { // função que verifica se há colisão
+function estaoSobrepostos(elementoA, elementoB) {
     const a = elementoA.getBoundingClientRect()
     const b = elementoB.getBoundingClientRect() 
 
@@ -156,14 +156,11 @@ function FlappyBird() {
     const restart = new RestartMessage()
     const barreiras = new Barreiras(altura, largura, 200, 400, () => progresso.atualizarPontos(++pontos))
     
-
-    // Adicionando os elementos para o jogo...
     areaDoJogo.appendChild(progresso.elemento)
     areaDoJogo.appendChild(passaro.elemento)
     barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
 
     this.start = () => {
-        // loop do jogo
         const temporizador = setInterval(() => {
             barreiras.animar()
             passaro.animar()
@@ -177,5 +174,5 @@ function FlappyBird() {
     }
 }
 
-new FlappyBird().start() // dá o start no jogo chamando a função start, responsável por "animar" com o temporizador
+new FlappyBird().start()
   
